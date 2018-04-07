@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "ZTNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    
+    ViewController *root = [ViewController new];
+    
+    ZTNavigationController *nav = [[ZTNavigationController alloc]initWithRootViewController:root];
+    
+    self.window.rootViewController = nav;
+    
     return YES;
+    
 }
 
 
