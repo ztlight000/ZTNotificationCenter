@@ -14,13 +14,21 @@
 
 
 LinkList LinkedListInit() {
+    
     Node *L;
+    
     L = (Node *)malloc(sizeof(Node));   //申请结点空间
+    
     if(L == NULL) { //判断是否有足够的内存空间
+        
         printf("申请内存空间失败\n");
+        
     }
+    
     L->next = NULL;                  //将next设置为NULL,初始长度为0的单链表
+    
     return L;
+    
 }
 
 - (instancetype)initWithData:(id)data {

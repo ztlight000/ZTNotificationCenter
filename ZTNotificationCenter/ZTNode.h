@@ -10,10 +10,10 @@
 
 @interface ZTNode : NSObject
 
-@property id data;//结点中的数据
+@property id data; //数据域
 
-@property ZTNode *next;//下一个结点的地址
+@property ZTNode *next; //指针域，指向下个节点
 
-- (id)initWithData:(id)data;//结点初始化
+- (id)initWithData:(id)data; //结点初始化
 
 @end
